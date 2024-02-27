@@ -119,7 +119,7 @@ join PortfolioProject..CovidVaccination vac
 
 select dea.date, dea.continent,dea.location,dea.total_cases,vac.population, 
 (cast(dea.total_cases as float)/cast(vac.population as float))*100 
-as DeathPercentage
+as TotalPopulationInfected
 from PortfolioProject..CovidDeath dea
 join PortfolioProject..CovidVaccination vac
 	on dea.location = vac.location
